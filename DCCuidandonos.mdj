@@ -9957,8 +9957,8 @@
 							"left": 736,
 							"top": 224,
 							"width": 144,
-							"height": 51,
-							"text": "El usuario cambia de tipo manualmente, cuando el quiera."
+							"height": 64,
+							"text": "El usuario cambia de tipo de usuario manualmente, cuando él quiera."
 						},
 						{
 							"_type": "UMLNoteView",
@@ -9971,7 +9971,7 @@
 							"top": 568,
 							"width": 304,
 							"height": 87,
-							"text": "public class Activo implementes TipoUsuario{\n\n  @Override\n   public void realizarViaje(Persona persona){\n     confirmarCuidadores(cuidadores)\n    }"
+							"text": "public class Activo implements TipoUsuario{\n\n  @Override\n   public void realizarViaje(Persona persona){\n     confirmarCuidadores(cuidadores)\n    }"
 						},
 						{
 							"_type": "UMLAssociationView",
@@ -13943,7 +13943,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGPRQH8YmakZiM="
 									},
-									"name": "situacion"
+									"name": "situacion",
+									"type": ""
 								}
 							]
 						},
