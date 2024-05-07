@@ -47,5 +47,8 @@ public class CalculadoraDeRecorrido {
 		       + parada.tiempoEnParada();
 	}
 
-	
 }
+
+
+// Cuando se hacen invocaciones como "parada1.direccion()" se está haciendo referencia al getter del atributo "direccion" de dicha instanciación de la clase "Parada",
+// para facilitar la legibilidad del código.
