@@ -3144,7 +3144,7 @@
 											"top": 1583,
 											"width": 199.021484375,
 											"height": 13,
-											"text": "+Comenzar()",
+											"text": "+comenzar()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3161,7 +3161,7 @@
 											"top": 1598,
 											"width": 199.021484375,
 											"height": 13,
-											"text": "+Finalizar()",
+											"text": "+finalizar()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -4497,7 +4497,7 @@
 											"top": 1215,
 											"width": 392.96142578125,
 											"height": 13,
-											"text": "CalculadorDeDistanciaAdaptado"
+											"text": "CalculadorDeDistanciaAdapter"
 										},
 										{
 											"_type": "LabelView",
@@ -14840,7 +14840,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGPNaVTsh0vFg8="
 							},
-							"name": "Comenzar"
+							"name": "comenzar"
 						},
 						{
 							"_type": "UMLOperation",
@@ -14848,7 +14848,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGPNaVTsh0vFg8="
 							},
-							"name": "Finalizar"
+							"name": "finalizar"
 						},
 						{
 							"_type": "UMLOperation",
@@ -15610,7 +15610,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "CalculadorDeDistanciaAdaptado",
+					"name": "CalculadorDeDistanciaAdapter",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
