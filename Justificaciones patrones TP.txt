@@ -1,0 +1,32 @@
+Justifaciones de patrones de diseño:
+
+Usamos patrón State para el modelado de los usuarios activos y pasivos, considerando usuarios
+activos a los transeúntes y pasivos a los cuidadores. 
+Utilizamos este patrón, para que así, quien use la aplicación, pueda cambiar su estado como usuario, 
+pudiendo así elegir ser un usuario activo y solicitar viajes, o ser un usuario pasivo y cuidar transeúntes.
+Además, este patrón contempla bien el caso de que un usuario no puede ser transeúnte y cuidador a la vez.
+
+Para el envío de las notificaciones usamos el patrón Strategy, pudiendo así enviar distintas 
+notificaciones a los cuidadores, según la situación lo amerite. 
+
+Para las situaciones utilizamos también el patrón Strategy para poder elegir el accionar
+dependiendo de la situación, y pudiendo también agregar más situaciones a futuro con mayor
+facilidad.
+
+Para la implementación de la API "DistanceMatrixAPI" usamos el patrón Adapter, ya que sabemos
+que la API ofrece un método que calcula la distancia entre dos direcciones, pero no sabemos 
+si las direcciones que recibe están igual de modeladas que las nuestras, o como está 
+implementada la API mismamente, entonces, necesitamos de una clase puente.
+
+
+
+Justificaciones de diseño en general:
+
+La Persona cambia de tipo de usuario manualmente, siempre y cuando la misma no se encuentre viajando 
+(en cuyo caso, ya tendría un tipo de usuario asignado dependiendo su rol en el viaje).
+
+Cuando las clases "Pasivo" (cuidadores) y "Activo" (transeúntes) hacen la invocación de sus métodos "realizarViaje",
+las mismas realizan sus funciones específicas para empezar el proceso de un viaje, en el caso del transeúnte sería solicitarlo
+y en el caso del cuidador sería aceptarlo. 
+
+Si en el Viaje el atributo "seDetienEnParadas" es falso, las páradas van a tener un tiempoEnParada = 0.

@@ -1,0 +1,51 @@
+public class CalculadorDeDistanciaAdaptado{
+	
+	private DistanceMatrixApi adaptada;
+
+	public Float calcularDistancia(Direccion origen, Direccion destino) {
+		// Se invoca a la API para que se encarge de cálcular la distancia entre los destinos.
+	}
+
+}
+
+public class CalculadoraDeRecorrido {
+	
+	private Viaje viaje;
+	private Float velocidadPromedioPersona; 
+	private AdapterDistancia calculadoraDistancia;
+
+	public CalculadoraDeRecorrido() {
+        	this.velocidadPromedioPersona = ; //Valor conocido, definido en m/s, siempre definido igual.
+   	 }
+
+
+	public Float calcularTiempoAproximado(viaje){	
+	Float tiempo = calcularTiempoEntreDirec(viaje.direccionInicial(), viaje.paradas[0]);
+
+		if (viaje.seDetieneEnParadas() == False){
+		  for(Integer i = 1; i < viaje.paradas.length(); i++){
+			tiempo += calcularTiempoEntreDirec(viaje.paradas[i-1].direccion(), viaje.paradas[i].direccion());
+		  }
+		}
+		else{
+		 for(Integer i = 1; i < viaje.paradas.length(); i++){
+			tiempo += calcularDemoraEntreParadas(viaje.paradas[i-1].direccion(), viaje.paradas[i].direccion());
+		  }		
+		}
+	
+	return tiempo;
+	}
+
+
+	public Float calcularTiempoEntreDirec(Direccion direccion1, Direccion direccion2) {
+		return calculadoraDistancia.calcularDistancia(parada1.direccion(), parada2.direccion()) / velocidadPromedioPersona;
+	}
+
+
+	public Float calcularDemoraEntreParadas(Parada parada1, Parada parada2){
+		return calcularTiempoEntreDirec(parada1.direccion(), parada2.direccion())
+		       + parada.tiempoEnParada();
+	}
+
+	
+}
