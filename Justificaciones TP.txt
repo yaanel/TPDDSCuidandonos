@@ -1,3 +1,6 @@
+Aclaración del TP en general: El DC contempla la implementación del punto 2 directamente, ya que el punto 1 está incluido en el mismo.
+
+
 Justifaciones de patrones de diseño:
 
 Usamos patrón State para el modelado de los usuarios activos y pasivos, considerando usuarios
