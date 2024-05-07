@@ -32,4 +32,8 @@ Cuando las clases "Pasivo" (cuidadores) y "Activo" (transeúntes) hacen la invoc
 las mismas realizan sus funciones específicas para empezar el proceso de un viaje, en el caso del transeúnte sería solicitarlo
 y en el caso del cuidador sería aceptarlo. 
 
+Cuando un cuidador acepta un viaje, se agrega a sí mismo a la lista de cuidadores del viaje que aceptó.
+Esto implica también que la lista de cuidadores del viaje incluye únicamente a los cuidadores que aceptaron.
+Si la lista está vacía, no se podrá comenzar el viaje, ya que ningún cuidador habrá aceptado.
+
 Si en el Viaje el atributo "seDetienEnParadas" es falso, las páradas van a tener un tiempoEnParada = 0.

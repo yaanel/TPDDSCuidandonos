@@ -20,16 +20,18 @@ public class CalculadoraDeRecorrido {
 
 
 	public Float calcularTiempoAproximado(viaje){	
-	Float tiempo = calcularTiempoEntreDirec(viaje.direccionInicial(), viaje.paradas[0]);
+	Float tiempo;
 
 		if (viaje.seDetieneEnParadas() == False){
+		  tiempo = calcularTiempoEntreDirec(viaje.direccionInicial(), viaje.paradas[0].direccion());
 		  for(Integer i = 1; i < viaje.paradas.length(); i++){
 			tiempo += calcularTiempoEntreDirec(viaje.paradas[i-1].direccion(), viaje.paradas[i].direccion());
 		  }
 		}
 		else{
+		 tiempo = calcularTiempoEntreDirec(viaje.direccionInicial(), viaje.paradas[0].direccion()) + viaje.paradas[0].tiempoEnParada();
 		 for(Integer i = 1; i < viaje.paradas.length(); i++){
-			tiempo += calcularDemoraEntreParadas(viaje.paradas[i-1].direccion(), viaje.paradas[i].direccion());
+			tiempo += calcularDemoraEntreParadas(viaje.paradas[i-1], viaje.paradas[i]);
 		  }		
 		}
 	
@@ -38,13 +40,13 @@ public class CalculadoraDeRecorrido {
 
 
 	public Float calcularTiempoEntreDirec(Direccion direccion1, Direccion direccion2) {
-		return calculadoraDistancia.calcularDistancia(parada1.direccion(), parada2.direccion()) / velocidadPromedioPersona;
+		return calculadoraDistancia.calcularDistancia(direccion1, direccion2) / velocidadPromedioPersona;
 	}
 
 
 	public Float calcularDemoraEntreParadas(Parada parada1, Parada parada2){
 		return calcularTiempoEntreDirec(parada1.direccion(), parada2.direccion())
-		       + parada.tiempoEnParada();
+		       + parada2.tiempoEnParada();
 	}
 
 }
