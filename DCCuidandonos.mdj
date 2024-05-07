@@ -4497,7 +4497,7 @@
 											"top": 1215,
 											"width": 392.96142578125,
 											"height": 13,
-											"text": "CalculadorDeDistanciaAdaptado"
+											"text": "CalculadorDeDistanciaAdapter"
 										},
 										{
 											"_type": "LabelView",
@@ -15637,7 +15637,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "CalculadorDeDistanciaAdaptado",
+					"name": "CalculadorDeDistanciaAdapter",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
